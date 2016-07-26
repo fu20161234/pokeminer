@@ -463,7 +463,6 @@ class Slave(threading.Thread):
             start_worker(self.worker_no, self.points)
             return
         while self.cycle <= 3:
-            self.step = 0
             self.main(service, api_endpoint, access_token, profile_response)
             self.cycle += 1
             if self.cycle <= 3:
